@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Portfolio</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+      <!-- Header / sticky navbar -->
+  <header class="site-header" role="banner">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#">
+        <img src="logo1header.png" alt="Morgan Logo" />
+      </a>
+
+      <!-- Mobile toggle button (JS will toggle .aria-expanded and .open on the nav) -->
+      <button class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-links" id="mainNav">
+        <a href="index.html" class="Home">Home</a>
+      <a href="project.html" class="Project">Project</a>
+      <a href="ojt.html" class="OJT">OJT</a>
+      <a href="about.html" class="About">About</a>
+      <a href="contact.html" class="mobile-link reach-mobile">Reach Out</a>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+
+    <header class="projects-header">
+      <h1>College Projects</h1>
+      <p class="lead">A curated set of websites & apps — each project shows a main preview and supporting screenshots.</p>
+    </header>
+
+    <!-- 5 project blocks -->
+    <section class="projects-list">
+
+      <!-- Project template repeated 5 times (update images & text) -->
+      <article class="project" data-project-id="1">
+        <div class="project-detail">
+          <div class="project-main-image">
+            <img src="assets/project1-main.jpg" alt="Project 1 main screenshot">
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">Project One — ClinicCare</h2>
+            <p class="project-role">Front-end · 2024 · React</p>
+            <p class="project-desc">ClinicCare is a responsive clinic management web app that tracks appointments and patient records.</p>
+            <div class="project-actions">
+              <a href="#" class="btn primary">Live Demo</a>
+              <a href="#" class="btn outline">View Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="supporting-section">
+          <h3 class="supporting-title">Supporting Images</h3>
+
+          <div class="supporting-row-wrapper">
+            <button class="nav-btn rewind" aria-label="Previous image">‹</button>
+
+            <div class="supporting-row" tabindex="0" role="list">
+              <figure class="support-card" role="listitem"><img src="assets/project1-1.jpg" alt="Proj1 s1"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project1-2.jpg" alt="Proj1 s2"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project1-3.jpg" alt="Proj1 s3"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project1-4.jpg" alt="Proj1 s4"></figure>
+            </div>
+
+            <button class="nav-btn forward" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project" data-project-id="2">
+        <div class="project-detail">
+          <div class="project-main-image">
+            <img src="project2/Whack1 main.png" alt="Project 2 main">
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">Project Two — EduLearn</h2>
+            <p class="project-role">Mobile App · 2023 · Kotlin</p>
+            <p class="project-desc">EduLearn helps students practice quizzes with spaced repetition and progress tracking.</p>
+            <div class="project-actions">
+              <a href="#" class="btn primary">View APK</a>
+              <a href="#" class="btn outline">Repository</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="supporting-section">
+          <h3 class="supporting-title">Supporting Images</h3>
+          <div class="supporting-row-wrapper">
+            <button class="nav-btn rewind" aria-label="Previous image">‹</button>
+            <div class="supporting-row" tabindex="0" role="list">
+              <figure class="support-card" role="listitem"><img src="project2/Whack2.png" alt="Proj2 s1"></figure>
+              <figure class="support-card" role="listitem"><img src="project2/Whack3.png" alt="Proj2 s2"></figure>
+              <figure class="support-card" role="listitem"><img src="project2/Whack4.png" alt="Proj2 s3"></figure>
+              <figure class="support-card" role="listitem"><img src="project2/Whack5.png" alt="Proj2 s3"></figure>
+            </div>
+            <button class="nav-btn forward" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project" data-project-id="3">
+        <div class="project-detail">
+          <div class="project-main-image">
+            <img src="assets/project3-main.jpg" alt="Project 3 main screenshot">
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">Project Three — Brand Refresh</h2>
+            <p class="project-role">UI/UX · 2022 · Figma</p>
+            <p class="project-desc">Rebranding and UI study for a small NGO, focusing on typographic clarity and contrast.</p>
+            <div class="project-actions">
+              <a href="#" class="btn primary">Case Study</a>
+              <a href="#" class="btn outline">Prototype</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="supporting-section">
+          <h3 class="supporting-title">Supporting Images</h3>
+          <div class="supporting-row-wrapper">
+            <button class="nav-btn rewind" aria-label="Previous image">‹</button>
+            <div class="supporting-row" tabindex="0" role="list">
+              <figure class="support-card" role="listitem"><img src="assets/project3-1.jpg" alt="Proj3 s1"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project3-2.jpg" alt="Proj3 s2"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project3-3.jpg" alt="Proj3 s3"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project3-4.jpg" alt="Proj3 s4"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project3-5.jpg" alt="Proj3 s5"></figure>
+            </div>
+            <button class="nav-btn forward" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project" data-project-id="4">
+        <div class="project-detail">
+          <div class="project-main-image">
+            <img src="assets/project4-main.jpg" alt="Project 4 main screenshot">
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">Project Four — Voting Tracker</h2>
+            <p class="project-role">Fullstack · 2024 · Firebase</p>
+            <p class="project-desc">A real-time vote tracker demo used to visualize simulated election results for a game.</p>
+            <div class="project-actions">
+              <a href="#" class="btn primary">Live Demo</a>
+              <a href="#" class="btn outline">Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="supporting-section">
+          <h3 class="supporting-title">Supporting Images</h3>
+          <div class="supporting-row-wrapper">
+            <button class="nav-btn rewind" aria-label="Previous image">‹</button>
+            <div class="supporting-row" tabindex="0" role="list">
+              <figure class="support-card" role="listitem"><img src="assets/project4-1.jpg" alt="Proj4 s1"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project4-2.jpg" alt="Proj4 s2"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project4-3.jpg" alt="Proj4 s3"></figure>
+            </div>
+            <button class="nav-btn forward" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="project" data-project-id="5">
+        <div class="project-detail">
+          <div class="project-main-image">
+            <img src="assets/project5-main.jpg" alt="Project 5 main screenshot">
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">Project Five — Poster Series</h2>
+            <p class="project-role">Design · 2021 · Illustrator</p>
+            <p class="project-desc">A creative poster series exploring community themes with bold typography and color.</p>
+            <div class="project-actions">
+              <a href="#" class="btn primary">Gallery</a>
+              <a href="#" class="btn outline">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="supporting-section">
+          <h3 class="supporting-title">Supporting Images</h3>
+          <div class="supporting-row-wrapper">
+            <button class="nav-btn rewind" aria-label="Previous image">‹</button>
+            <div class="supporting-row" tabindex="0" role="list">
+              <figure class="support-card" role="listitem"><img src="assets/project5-1.jpg" alt="Proj5 s1"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project5-2.jpg" alt="Proj5 s2"></figure>
+              <figure class="support-card" role="listitem"><img src="assets/project5-3.jpg" alt="Proj5 s3"></figure>
+            </div>
+            <button class="nav-btn forward" aria-label="Next image">›</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- LIGHTBOX (single modal used for all projects) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lightbox-close" id="lbClose" aria-label="Close">×</button>
+    <button class="lightbox-prev" id="lbPrev" aria-label="Previous image">‹</button>
+    <div class="lightbox-inner" id="lbInner" role="document">
+      <img id="lbImage" src="" alt="">
+      <p id="lbCaption" class="lb-caption"></p>
+    </div>
+    <button class="lightbox-next" id="lbNext" aria-label="Next image">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

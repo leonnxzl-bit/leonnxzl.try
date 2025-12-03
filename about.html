@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Klisme — About</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <!-- accessibility: skip to main content -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER: full-bleed background but constrained inner content -->
+  <header class="site-header" role="banner">
+    <div class="site-header-bg" role="presentation">
+      <div class="header-inner-inner" role="navigation" aria-label="Primary navigation">
+        <!-- Brand / logo -->
+        <div class="brand">
+          <a class="brand-link" href="/" aria-label="Klisme — Home">
+            <img class="brand-logo" src="images/logo1header.png" alt="Klisme logo">
+          </a>
+        </div>
+
+        <!-- Primary navigation -->
+        <nav class="nav" id="mainNav" aria-label="Primary">
+          <ul role="menubar" aria-hidden="false">
+            <li role="none"><a role="menuitem" class="nav-link active" href="#">HOME</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#products">PRODUCT</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#review">REVIEW</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#support">SUPPORT</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile hamburger controls -->
+        <div class="nav-controls">
+          <button id="hamburger"
+                  class="nav-btn"
+                  aria-controls="mainNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="hamburger-bar" aria-hidden="true"></span>
+            <span class="hamburger-bar" aria-hidden="true"></span>
+            <span class="hamburger-bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">PREMIUM QUALITY PRODUCTS</p>
+          <h1 id="hero-heading">Feel The Softness</h1>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p><a class="btn-cta" href="#products">TRY IT</a></p>
+        </div>
+
+        <div class="hero-image" aria-hidden="true">
+          <img src="images/hero.webp" alt="luxury fabric texture">
+        </div>
+      </div>
+
+      <svg class="hero-wave" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,0 C300,100 900,0 1200,80 L1200,0 L0,0 Z" fill="#f6efe6"></path>
+      </svg>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="products-section" aria-labelledby="products-title">
+      <div class="container">
+        <h2 id="products-title" class="section-title">Products</h2>
+
+        <div class="products-grid" role="list">
+          <article class="product-card" role="listitem">
+            <div class="product-media"><img src="images/pillow-placeholder.jpg" alt="Pillow Cover"></div>
+            <div class="product-name">Pillow Cover</div>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <div class="product-media"><img src="images/pajamas-placeholder.jpg" alt="Silk Pajamas"></div>
+            <div class="product-name">Silk Pajamas</div>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <div class="product-media"><img src="images/scrunchie-placeholder.jpg" alt="Silk Scrunchies"></div>
+            <div class="product-name">Silk Scrunchies</div>
+          </article>
+
+          <article class="product-card" role="listitem">
+            <div class="product-media"><img src="images/eyemask-placeholder.jpg" alt="Eye Mask"></div>
+            <div class="product-name">Eye Mask</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-media">
+          <img src="images/about-fabric.jpg" alt="gold fabric closeup">
+        </div>
+
+        <div class="about-content">
+          <h3 id="about-title">About Us</h3>
+          <p>We craft premium textile goods with a focus on tactile luxury, thoughtful design, and ethical manufacturing. Our products blend modern elegance with timeless comfort.</p>
+
+          <ul class="about-list">
+            <li><strong>Material:</strong> 100% Mulberry Silk & premium satin blends</li>
+            <li><strong>Ethics:</strong> Responsibly sourced, small-batch production</li>
+            <li><strong>Care:</strong> Gentle wash, long-lasting finish</li>
+          </ul>
+
+          <p><a class="btn-secondary" href="#contact">CONTACT</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Klisme — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="about.js" defer></script>
+</body>
+</html>

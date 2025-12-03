@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Morgan Portfolio</title>
+
+  <!-- local stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP optional (keep if you use it) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- accessibility skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- splash -->
+  <div class="splash" id="splash" role="dialog" aria-hidden="false" aria-label="Loading">
+    <img src="logo1header.png" alt="Logo" class="splash-logo" />
+  </div>
+
+  <!-- Video + overlay + decorative glow -->
+  <video id="bgVideo" autoplay muted playsinline loop preload="auto" aria-hidden="true">
+    <source src="introVid.webm" type="video/webm">
+    <source src="introVid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+
+  <!-- Header / sticky navbar -->
+  <header class="site-header" role="banner">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#">
+        <img src="logo1header.png" alt="Morgan Logo" />
+      </a>
+
+      <!-- Mobile toggle button (JS will toggle .aria-expanded and .open on the nav) -->
+      <button class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-links" id="mainNav">
+       <a href="index.html" class="Home">Home</a>
+      <a href="project.html" class="Project">Project</a>
+      <a href="ojt.html" class="OJT">ojt</a>
+      <a href="about.html" class="About">About</a>
+      <a href="contact.html" class="mobile-link reach-mobile">Reach Out</a>
+      
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-left">
+        <h4 class="intro">Hi, I am Ella, I design</h4>
+        <h1 id="hero-heading">The Perfect Website</h1>
+        <p class="tagline">Bringing Ideas to Life, One Pixel at a Time</p>
+        <small>A graphics designer that solves design related problems.</small>
+      </div>
+
+      <div class="hero-right">
+        <!-- use an image or a small looping muted animation; keep it constrained -->
+        <img class="hero-image" src="logo.png" alt="Ella portrait">
+      </div>
+    </section>
+
+    <!-- Add more sections below (projects, portfolio, contact...) -->
+  </main>
+
+  <footer class="site-footer container" role="contentinfo">
+    <p>&copy; <span id="year"></span> Morgan Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* contact.css
+   Recreated mobile/tablet hamburger + rounded dropdown like the screenshot.
+   Key: hamburger visible on <=1023.98px; desktop nav visible on larger viewports.
+*/
+
+/* ---------- variables ---------- */
+:root{
+  --bg: #0b0b0b;
+  --muted:  #bdbdbd;
+  --accent: #f3b334;
+  --panel-radius: 20px;
+  --max-width: 1200px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* ---------- base ---------- */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:
+  radial-gradient(1200px 800px at 10% 10%, #081218 0%, var(--bg) 45%), var(--bg);
+  color:var(--muted);-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:22px;display:flex;align-items:center;gap:16px}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:60;background:linear-gradient(180deg, rgba(0,0,0,0.12), transparent);backdrop-filter:blur(6px)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px}
+.brand-name{font-weight:700;color:var(--muted)}
+
+
+/* desktop nav */
+.nav {margin-left:auto;display:flex;gap:50px;align-items:center}
+.nav a {color:var(--text);text-decoration:none;font-weight:700;padding:10px 10px;display:inline-block}
+.nav a:hover,.nav-links a:focus{color:var(--accent)}
+.nav a::after{content:"";display:block;height:2px;width:0;background:var(--accent);transition:width .28s;margin-top:6px}
+.nav a:hover::after,.nav-links a:focus::after{width:100%}
+.nav {color:var(--muted);text-decoration:none;padding:8px 6px;border-radius:8px;font-weight:600}
+.reach-btn{background:linear-gradient(180deg,var(--accent),#f0b83b);color:#071018;padding:10px 16px;border-radius:10px;font-weight:700}
+
+/* hamburger style (three white lines) */
+.hamburger{
+  display:none; /* shown on <=1023.98px */
+  margin-left:auto;
+  width:44px;height:44px;border-radius:8px;border:0;background:transparent;cursor:pointer;
+  align-items:center;justify-content:center;position:relative;
+}
+.hamburger .bar{
+  display:block;
+  width:22px;height:3px;margin:4px 0;background:#fff;border-radius:2px;
+  transition:opacity .18s ease, transform .18s ease;
+}
+
+
+/* backdrop (dim) */
+.backdrop{
+  display:none;
+  position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:58;opacity:0;pointer-events:none;
+  transition:opacity .18s ease;
+}
+.backdrop.show{ display:block; opacity:1; pointer-events:auto; }
+
+/* mobile nav (rounded drop panel top-right) */
+.mobile-nav{
+  display:none; /* toggled on */
+  position:fixed; top:72px; right:18px;
+  width:240px; padding:26px 20px;
+  background: rgba(7,8,10,0.97);
+  border-radius:20px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.03);
+  z-index:59;
+  transform-origin: top right;
+  transform: translateY(-8px) scale(.98);
+  opacity:0;
+  transition: transform .18s ease, opacity .18s ease;
+}
+/* visible state */
+.mobile-nav.show{
+  display:block;
+  transform: translateY(0) scale(1);
+  opacity:1;
+}
+/* menu items */
+.mobile-link{
+  display:block;
+  color:#ffffff;
+  font-weight:800;
+  font-size:18px;
+  text-decoration:none;
+  padding:12px 4px;
+  border-radius:8px;
+}
+.mobile-link + .mobile-link{ margin-top:6px; }
+
+/* reach out special */
+.reach-mobile{
+  margin-top:8px;
+  display:inline-block;
+  background:linear-gradient(180deg,var(--accent),#f0b83b);
+  color:#071018;padding:10px 12px;border-radius:10px;font-weight:800;
+}
+
+/* ---------- main content (kept simple) ---------- */
+.container{max-width:var(--max-width);margin:24px auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:1fr;gap:28px}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.007));padding:28px;border-radius:14px;border:1px solid rgba(255,255,255,0.02)}
+.contact-panel{min-height:420px;padding:36px}
+.details-panel{min-height:420px;padding:34px}
+.title{font-size:36px;color:#fff;margin:0 0 8px;font-weight:700}
+.lead{color:var(--muted);margin-bottom:18px}
+
+/* form */
+.form input,.form textarea{width:100%;background:transparent;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:10px;color:var(--muted);margin-top:8px}
+.form-actions{display:flex;gap:16px;margin-top:16px}
+.btn{padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+.btn.primary{background:linear-gradient(180deg,var(--accent),#f0b83b);color:#071018}
+.btn.ghost{background:transparent;color:var(--muted)}
+
+/* ---------- responsive rules ---------- */
+
+/* Tablet & up: show grid 2-col */
+@media (min-width: 640px){
+  .grid{grid-template-columns:1fr 420px}
+  .contact-panel{min-height:520px}
+  .details-panel{min-height:520px}
+  .title{font-size:42px}
+}
+
+/* Desktop: show desktop nav, hide hamburger & mobile nav */
+@media (min-width: 1024px){
+  .hamburger{display:none}
+  .mobile-nav{display:none !important}
+  .backdrop{display:none !important}
+  .nav{display:flex}
+}
+
+/* Below desktop: show hamburger, hide desktop nav (desktop-first max-width approach) */
+@media (max-width: 1023.98px){
+  .nav{display:none}
+  .hamburger{display:flex}
+}
+
+/* Mobile tweaks */
+@media (max-width: 639.98px){
+  .wrap{padding:14px}
+  .mobile-nav{ top:64px; right:12px; width:88%; left:12px; }
+  .title{font-size:28px}
+  .grid{grid-template-columns:1fr;gap:20px}
+  .contact-panel,.details-panel{padding:22px;min-height:auto}
+  .brand-name{display:none}
+  .reach-btn{display:none}
+}
+
+/* small focus styling */
+a:focus,button:focus,input:focus,textarea:focus{outline:none;box-shadow:0 0 0 4px rgba(240,184,59,0.08)}
